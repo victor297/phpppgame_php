@@ -1,0 +1,303 @@
+@font-face {
+    font-family: Rubik;
+    font-display: swap;
+    src: url(../assests/Aku&Kamu.otf)
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Rubik;
+}
+
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}
+.glassphomism{
+    color: #fff;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 2px;
+    padding: 5px;
+}
+.overlap{
+    position:fixed;
+    visibility:hidden;
+    opacity:0;
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    transition: 0.3s ease-in-out;
+    background: rgba(0,0,0,0.1);
+}
+.overlap.active{
+    visibility:visible;
+    opacity:1;
+}
+.overlap > *{
+    position:absolute;
+    transition: 0.3s ease-in-out;
+     display:flex;
+    width: 400px;
+    max-width:100%;
+    padding:20px;
+    background: #fff;
+    color:rgba(52, 152, 219,1.0);
+    flex-direction:column;
+    gap:10px;
+    top: 200%;
+    left:50%;
+    transition: 0.3s ease-in-out;
+    transform:translate(-50% , -50%);
+}
+.overlap > *.active{
+    top: 50%;
+}
+
+.crossBtn{
+    position:absolute;
+    top:10px;
+    right:10px;
+    background: rgba(52, 152, 219,0.3);
+    border-radius:50%;
+    height:30px;
+    width:30px;
+    display:grid;
+    cursor:pointer;
+    place-items:center
+}
+input:is([type='text'],[type='number']){
+    padding: 6px 12px;
+    width:100%;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    appearance: none;
+    border-radius: 4px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+input:is([type='text'],[type='number']):focus{
+        color: #212529;
+        background-color: #fff;
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgb(13 110 253 / 25%);
+}
+
+.uploadImgContainer{
+    height:250px;
+    width:100%;
+    border:1px solid grey;
+    border-radius:5px;
+    cursor:pointer;
+    padding:15px;
+}
+
+.uploadImgContainer span{
+    font-size:50px;
+}
+.uploadImgContainer img{
+    display:none;
+}
+.uploadImgContainer.active span{
+    display:none;
+}
+.uploadImgContainer.active img{
+    display:block;
+}
+
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 400px;
+}
+
+table td, table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  height:50px;
+  text-align:center;
+}
+
+table tr:nth-child(even){background-color: #f2f2f2;}
+
+table tr:hover {background-color: #ddd;}
+
+table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04AA6D;
+  color: white;
+}
+[icon="akar-icons:edit"]{
+    color: rgba(41, 128, 185,1.0);
+}
+[icon="ic:baseline-delete"]{
+    color: rgba(192, 57, 43,1.0);
+}
+
+.custom_select {
+    position: relative;
+    text-transform:uppercase;
+    font-weight:800;
+}
+
+.title {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.custom_select.active .content {
+    visibility: visible;
+    opacity: 1;
+}
+
+.custom_select .content {
+    visibility: hidden;
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 10;
+}
+
+.custom_select .content ul {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+.custom_select .content ul li {
+    padding: 5px 10px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    height: 40px;
+    align-items: center;
+    justify-content:space-between;
+    gap: 10px;
+    transition:0.3s ease-in-out;
+}
+.custom_select .content ul li:is(.active,:hover){
+    background:#f0f0f0;
+}
+
+
+.ex_avaialable{
+    height:30px;
+    width:30px;
+    padding:5px;
+    background: rgba(52, 152, 219, 0.3);
+    border-radius: 50%;
+    box-sizing: content-box;
+}
+
+
+.ex_crossBtn{
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    background: rgb(219 52 52);
+    border-radius: 50%;
+    height: 15px;
+    color: #fff;
+    font-size: 10px;
+    width: 15px;
+    display: grid;
+    cursor: pointer;
+    place-items: center;
+}
+
+.btn-1{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: url(../assests/Green-btn.png);
+    background-size: 100% 100%;
+    color: #fff;
+    font-size: 20px;
+    padding: 1px 30px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    -webkit-text-stroke: 1px #000;
+}
+
+.btn-1 span{
+    font-family: "Fredoka", sans-serif;
+}
+
+.backgroundImgBox{
+    height: 100px;
+    cursor:pointer;
+    border-radius:5px;
+    outline:5px solid #ddd;
+    transition:0.3s ease-in-out;
+}
+
+.backgroundImgBox.active{
+    outline:5px solid rgba(41, 128, 185,1.0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
